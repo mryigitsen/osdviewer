@@ -1,0 +1,39 @@
+
+
+<div class="row ">
+  <div class="col-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <h4 class="card-title">Available files</h4>
+          <input type="button" class='Button btn btn-info' value='Push to AI' style = "margin-left:auto;" (click)="sendToAI()"/>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+            <tr>
+              <th (click)="sortTable(0)"> File Name </th>
+              <th> </th>
+              <th (click)="sortTable(2)"> Confidence Value </th>
+              <th (click)="sortTable(2)"> Order </th>
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let slide of answ">
+              <td>{{ slide.fileName }}</td>
+              <td> <input type="button" class='Button btn btn-primary' value='Open Slide' (click)="showSlide(slide.filePath)" /> </td>
+              <td> 1</td>
+              <td> 1</td>
+
+            </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
